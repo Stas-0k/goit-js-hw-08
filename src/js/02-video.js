@@ -10,9 +10,7 @@ let stopTime = localStorage.getItem('videoplayer-current-time');
 let jsStopTime = JSON.parse(stopTime)
 
     
-player.setCurrentTime(jsStopTime.seconds).then(function(seconds) {
-    seconds = jsStopTime.seconds;
-})
+player.setCurrentTime(jsStopTime.seconds)
 
 
 
