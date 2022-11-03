@@ -8,7 +8,7 @@ player.on('play', function (timeupdate) {
 });
 let stopTime = localStorage.getItem('videoplayer-current-time');
 let jsStopTime = JSON.parse(stopTime)
-
+jsStopTime.seconds = 0;
     
 player.setCurrentTime(jsStopTime.seconds)
 
