@@ -25,8 +25,20 @@ function dataPreview() {
     if (localStorage.getItem('feedback-form-state')) { 
         const jsonData = localStorage.getItem('feedback-form-state')
         const parseData = JSON.parse(jsonData)
-        emailInput.value = parseData.email;
-        messageInput.value = parseData.message;
+        if (parseData.email) {
+            emailInput.value = parseData.email;
+        } else { 
+            alert('All fields must be filled!')
+            emailInput.value = ''
+        }
+
+        if (parseData.message) {
+            messageInput.value = parseData.message;
+        } else { 
+            alert('All fields must be filled!')
+            messageInput.value = ''
+        }
+        
     }
 }
 
